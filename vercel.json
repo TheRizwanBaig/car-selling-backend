@@ -1,17 +1,4 @@
 {
   "version": 2,
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "app.js"
-    },
-    {
-      "src": "/uploads/(.*)",
-      "dest": "/uploads/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "app.js"
-    }
-  ]
+  "routes": [{ "src": "/(.*)", "dest": "/" }]
 }
