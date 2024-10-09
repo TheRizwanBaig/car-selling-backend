@@ -23,8 +23,10 @@ app.use("/uploads", express.static("uploads"));
 app.use("/api/auth", authRoutes);
 app.use("/api/cars", carRoutes);
 
-// Start the server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+// Test route for root
+app.get("/", (req, res) => {
+  res.send("Express on Vercel");
 });
+
+// Export the app for Vercel
+export default app;
