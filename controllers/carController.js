@@ -2,7 +2,7 @@ import { Car } from "../models/Car.js";
 
 export const addCar = async (req, res) => {
   const { brand, model, year, price, phone, city } = req.body;
-  const pictures = req.files.map((file) => file.path);
+  const pictures = req.files ? req.files.map((file) => file.path) : []; // Handle case where no files are uploaded
 
   try {
     const car = new Car({
